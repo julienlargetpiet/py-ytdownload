@@ -1,6 +1,4 @@
-#!usr/bin python3
-
-from pytube import YouTube
+from pytube import *
 
 import os
 
@@ -10,6 +8,8 @@ name = str(input("What is the name you want to give to the file to download?"))
 
 ext = str(input("What is the file extension? (mkv/mp4)"))
 
+resolution = str(input("Resolution? (ex:720p)"))
+
 ext = "." + ext
 
 name = name + ext
@@ -18,13 +18,13 @@ url = str(input("url?"))
 
 yt = YouTube(url)
 
-yt.streams.first().download()
+yt.streams.filter(res='720p').first().download()
 
-os.rename(yt.streams.first().default_filename, name)
+os.rename(yt.streams.filter(res=resolution).first().default_filename, name)
 
 print("done :)")
 
-extract = str(input("Do you want to extract the sound of the file? (y/n))"))
+extract = str(input("Do you want to extract the sound of the file? (y/n)"))
 
 if extract == "y":
 
