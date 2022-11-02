@@ -18,7 +18,7 @@ url = str(input("url?"))
 
 yt = YouTube(url)
 
-yt.streams.filter(res='720p').first().download()
+yt.streams.filter(res=resolution).first().download()
 
 os.rename(yt.streams.filter(res=resolution).first().default_filename, name)
 
