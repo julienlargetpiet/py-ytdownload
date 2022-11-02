@@ -10,4 +10,4 @@ Allow downloading youtube video (mp4 or mkv) and extract sound from it if you wa
 
 You can directly name the file runing the program.
 
-You can choose the resolution of the video (it has to match the yt video resolution).
+You can choose the resolution of the video (it has to match the youtube video resolution (same or lower)).
