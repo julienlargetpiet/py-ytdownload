@@ -22,6 +22,8 @@ yt.streams.filter(res=resolution).first().download()
 
 os.rename(yt.streams.filter(res=resolution).first().default_filename, name)
 
+namer = name
+
 print("done :)")
 
 extract = str(input("Do you want to extract the sound of the file? (y/n)"))
@@ -68,6 +70,13 @@ if extract == "y":
 
     print("done :)")
 
+    deletion = str(input("Do you want to delete the video? (y/n)"))
+
+    if deletion == "y":
+
+        print(namer)
+
+        os.remove(namer)
 
 
 
