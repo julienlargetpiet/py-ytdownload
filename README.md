@@ -6,6 +6,8 @@ Requirements:
   
   -install moviepy with: pip install moviepy
 
+This is command line based.
+
 Allow downloading youtube video (mp4 or mkv) and extract sound from it if you want (wav or mp3).
 
 You can directly name the file runing the program.
